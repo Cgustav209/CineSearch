@@ -1,0 +1,311 @@
+/* ================= RESET ================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+/* ================= BODY ================= */
+
+body {
+  background: url("../img/FundoTex.png") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: #000; /* segurança contra fundo branco */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* ================= GRID PRINCIPAL ================= */
+
+.movie-view {
+  width: 1100px;
+  max-width: 95%;
+
+  display: grid;
+  grid-template-columns: 300px 1fr 180px;
+  grid-template-rows: auto auto auto auto;
+  gap: 12px;
+}
+
+/* ================= CARDS ================= */
+
+.movie-view > div {
+  padding: 20px;
+  border-radius: 12px;
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+
+/* ================= ESTILOS ESPECÍFICOS ================= */
+
+.capa {
+  background:ur;
+    border-radius: 16px;
+}
+
+.sinopse {
+   position: relative;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(15px);
+  color: white;
+  background-color: transparent;
+}
+
+.sinopse::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  padding: 3px; /* espessura da borda */
+  background: linear-gradient(90deg, #6a00ff, #ffd000);
+  -webkit-mask: 
+    linear-gradient(90deg, #ffee00 0 0) content-box, 
+    linear-gradient(90deg, #ae00ff 0 0);
+  mask: linear-gradient(90deg, #ffee00 0 0) content-box, linear-gradient(90deg, #ae00ff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.elenco {
+   position: relative;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(15px);
+  color: white;
+  background-color: transparent;
+}
+
+.genero {
+   position: relative;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(15px);
+  color: white;
+  background-color: transparent;
+}
+
+
+.duracao {
+   position: relative;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(15px);
+  color: white;
+  background-color: transparent;
+}
+
+.data {
+   position: relative;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(15px);
+  color: white;
+  background-color: transparent;
+}
+
+.nota {
+   position: relative;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(15px);
+  color: white;
+  background-color: transparent;
+}
+
+.pais {
+   position: relative;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(15px);
+  color: white;
+  background-color: transparent;
+}
+
+
+.pais::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  padding: 3px; /* espessura da borda */
+  background: linear-gradient(90deg, #6a00ff, #ffd000);
+  -webkit-mask: 
+    linear-gradient(90deg, #ffee00 0 0) content-box, 
+    linear-gradient(90deg, #ae00ff 0 0);
+  mask: linear-gradient(90deg, #ffee00 0 0) content-box, linear-gradient(90deg, #ae00ff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.nota::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  padding: 3px; /* espessura da borda */
+  background: linear-gradient(90deg, #6a00ff, #ffd000);
+  -webkit-mask: 
+    linear-gradient(90deg, #ffee00 0 0) content-box, 
+    linear-gradient(90deg, #ae00ff 0 0);
+  mask: linear-gradient(90deg, #ffee00 0 0) content-box, linear-gradient(90deg, #ae00ff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.data::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  padding: 3px; /* espessura da borda */
+  background: linear-gradient(90deg, #6a00ff, #ffd000);
+  -webkit-mask: 
+    linear-gradient(90deg, #ffee00 0 0) content-box, 
+    linear-gradient(90deg, #ae00ff 0 0);
+  mask: linear-gradient(90deg, #ffee00 0 0) content-box, linear-gradient(90deg, #ae00ff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.duracao::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  padding: 3px; /* espessura da borda */
+  background: linear-gradient(90deg, #6a00ff, #ffd000);
+  -webkit-mask: 
+    linear-gradient(90deg, #ffee00 0 0) content-box, 
+    linear-gradient(90deg, #ae00ff 0 0);
+  mask: linear-gradient(90deg, #ffee00 0 0) content-box, linear-gradient(90deg, #ae00ff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.genero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  padding: 3px; /* espessura da borda */
+  background: linear-gradient(90deg, #6a00ff, #ffd000);
+  -webkit-mask: 
+    linear-gradient(90deg, #ffee00 0 0) content-box, 
+    linear-gradient(90deg, #ae00ff 0 0);
+  mask: linear-gradient(90deg, #ffee00 0 0) content-box, linear-gradient(90deg, #ae00ff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.elenco::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  padding: 3px; /* espessura da borda */
+  background: linear-gradient(90deg, #6a00ff, #ffd000);
+  -webkit-mask: 
+    linear-gradient(90deg, #ffee00 0 0) content-box, 
+    linear-gradient(90deg, #ae00ff 0 0);
+  mask: linear-gradient(90deg, #ffee00 0 0) content-box, linear-gradient(90deg, #ae00ff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+
+
+.rodape {
+  background: #111;
+  grid-column: 1 / -1;
+  text-align: center;
+  color: white;
+}
+
+/* ================= POSICIONAMENTO GRID ================= */
+
+.capa { grid-row: 8 / 1; }
+.sinopse { grid-column: 2 / 4; }
+.genero { grid-column: 2; }
+.duracao { grid-column: 3; }
+.data { grid-column: 2; }
+.nota { grid-column: 3; }
+.pais { grid-column: 2 / 4; }
+.elenco { grid-column: 1 / 3; }
+
+/* ================= IMAGEM ================= */
+
+.capa img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* ================= ANIMAÇÕES DE ENTRADA ================= */
+
+.capa, .elenco {
+  transform: translateX(-120px);
+}
+
+.sinopse {
+  transform: translateY(-120px);
+}
+
+.duracao, .nota {
+  transform: translateX(120px);
+}
+
+.data, .pais, .rodape {
+  transform: translateY(120px);
+}
+
+.movie-view.active > div {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+/* ================= DELAYS ================= */
+
+.movie-view.active .capa { transition-delay: 0.1s; }
+.movie-view.active .sinopse { transition-delay: 0.2s; }
+.movie-view.active .genero { transition-delay: 0.3s; }
+.movie-view.active .duracao { transition-delay: 0.35s; }
+.movie-view.active .data { transition-delay: 0.4s; }
+.movie-view.active .nota { transition-delay: 0.45s; }
+.movie-view.active .pais { transition-delay: 0.5s; }
+.movie-view.active .elenco { transition-delay: 0.55s; }
+.movie-view.active .rodape { transition-delay: 0.6s; }
+
+/* ================= BOTÃO ================= */
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background: linear-gradient(90deg, #ffd000, #ffae00);
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
