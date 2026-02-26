@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cine Search</title>
+    <link rel="stylesheet" href="/scr/principalstyles.css">
+</head>
+<body>
+    <header>
+        <h1>Cine Search</h1>
+      
+     <form id="search-form">
+            <input id="search-input" type="text" placeholder="Digite o nome do filme..." required>     
+    </form>
+
+     <button id="tema" type="submit">*</button>
+   
+     </header> 
+      <hr>
+    <main>
+        <nav class="ListaCategorias" id="categorias">
+            <!-- Lista de categorias de filmes -->
+            <ul class="categorias">
+                <li>
+                    <a href="#">Todos</a>
+                </li>
+                <li>
+                    <a href="#">Acão</a>
+                </li>
+                <li>
+                    <a href="#">Ficção Científica</a>
+                </li>
+                <li>
+                    <a href="#">Terror</a>
+                </li>
+                <li>
+                    <a href="#">Drama</a>
+                </li>
+                <li>
+                    <a href="#">Aventura</a>
+                </li>
+                <li>
+                    <a href="#">Thiller</a>
+                </li>
+                <li>
+                    <a href="#">Romance</a>
+                </li>
+            </ul>
+            
+        </nav>
+        <hr>
+         <section class="sessaoFilmes" id="movies-container">
+            <div class="apresentacao">
+               <div class="apresentacao-texto">
+                    <hr>
+                    <h2 id="categoria">Todos</h2>
+                </div>
+                <div class="quantidade">
+                    <h2 id="quantidade-filmes">0</h2>
+                    <p>filmes</p>
+                </div>
+            </div>
+            <!-- Os filmes serão exibidos aqui -->
+            <div class="filmes" id="movies-list">  
+                 <a href="#" class="filme">
+                    <img src="https://i0.wp.com/audienciadatv.net/wp-content/uploads/2023/03/o-espetacular-homem-aranha-21.jpg?resize=750%2C1000&ssl=1" alt="Poster do Filme">
+                    <h3 id="tituloFilme">Titulo</h3>
+                    <div>
+                        <p id="lancamento">2020</p>
+                        <p id="gênero">genero</p>
+                    </div>
+                 </a>
+            </div>              
+         </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Cine Search. Todos os direitos reservados.</p>
+    </footer>
+    <script src="/javascript/principalscript.js"></script>
+</body>
+</html>
