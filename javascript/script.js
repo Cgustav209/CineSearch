@@ -18,7 +18,7 @@ async function buscarFilme() {
     Dados.Search.forEach(filme =>{
         const IdFilme = filme.imdbID
         const card = `
-            <a href="../Filmes/Filmes.html" id=${IdFilme} class="filme">
+            <a href="../Filmes/Filmes.html?id=${IdFilme}" class="filme">
                 <img src="${filme.Poster}" alt="Poster">
                 <h3>${filme.Title}</h3>
                 <div>
