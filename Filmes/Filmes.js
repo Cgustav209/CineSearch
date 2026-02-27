@@ -42,7 +42,7 @@ function carregarFilmeFicticio() {
   // Objeto montado manualmente na brutalidade
   const filmeFake = {
     Title: "🕷️🕸️ Homem-Aranha: Através do Aranhaverso",
-    Plot: "Depois de se firmar como o Homem-Aranha do Brooklyn, Miles Morales reencontra Gwen Stacy e é lançado através do multiverso, onde descobre a existência de uma sociedade de Homens-Aranha liderada por Miguel O'Hara. Lá, ele descobre que certos “eventos canônicos” — momentos de perda e dor — são considerados essenciais para manter a estabilidade das realidades. Quando Miles percebe que o destino de sua própria família pode estar ligado a essas regras, ele entra em conflito com os outros Aranhas, decidindo trilhar seu próprio caminho. Enquanto isso, uma nova ameaça surge: o vilão conhecido como The Spot, cujos poderes interdimensionais podem colocar todo o multiverso em risco. Entre destino e escolha, responsabilidade e rebeldia, Miles precisa decidir que tipo de herói ele quer ser.",
+    Plot: "Depois de se firmar como o Homem-Aranha do Brooklyn, Miles Morales reencontra Gwen Stacy e é lançado através do multiverso, onde descobre a existência de uma sociedade de Homens-Aranha liderada por Miguel O'Hara. Lá, ele descobre que certos “eventos canônicos” — momentos de perda e dor — são considerados essenciais para manter a estabilidade das realidades.",
     Genre: "Animação, Ação, Aventura, Super-herói, Ficção científica e Drama.",
     Runtime: "2h20min (140 minutos).",
     Year: "2 de junho de 2023",
@@ -90,7 +90,8 @@ function preencherTela(dados) {
   document.getElementById("elenco").innerText = "Elenco: " + dados.Actors;
 
   // Atualiza o poster
-  document.getElementById("poster").src = dados.Poster;
+ document.getElementById("poster").src =
+  dados.Poster !== "N/A" ? dados.Poster : "img/poster-padrao.jpg";
 
   // Diretor e roteiro no mesmo bloco
   document.getElementById("direcao").innerHTML =
