@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <!-- título simples porque o foco é o filme, não frescura -->
+  <title>Detalhes do Filme</title>
+
+  <!-- puxando o CSS porque sem estilo fica parecendo trabalho de 2009 -->
+  <link rel="stylesheet" href="Filmes.css">
+</head>
+<body>
+
+  <!-- esse é o container supremo do filme inteiro -->
+  <section class="movie-view" id="movieView">
+
+    <!-- capa do filme, porque sem poster não tem respeito -->
+    <div class="capa">
+      <img id="poster" src="" alt="Poster do Filme">
+    </div>
+
+    <!-- sinopse, o textão que vende a parada -->
+    <div class="sinopse">
+      <h2 id="titulo"></h2> <!-- título vem do JS, aqui é só o trono vazio -->
+      <p id="sinopseTexto"></p> <!-- descrição grandona -->
+    </div>
+
+    <!-- informações técnicas porque a gente é organizado (às vezes) -->
+    <div class="genero" id="genero"></div>
+    <div class="duracao" id="duracao"></div>
+
+    <div class="data" id="ano"></div>
+    <div class="nota" id="nota"></div>
+
+    <div class="pais" id="pais"></div>
+    <div class="premios" id="premios"></div>
+    <div class="elenco" id="elenco"></div>
+    <div class="direcao" id="direcao"></div>
+
+    <!-- parte das avaliações porque número manda no mundo -->
+    <div class="avaliacoes">
+      <h3>Avaliações</h3>
+      <div id="ratingsContainer"></div> <!-- JS vai enfiar coisa aqui -->
+    </div>
+
+    <!-- botão pra sair vazado -->
+    <div class="rodape">
+      <button onclick="voltar()">← Voltar</button>
+    </div>
+
+  </section>
+
+  <!-- cérebro do rolê -->
+  <script src="Filmes.js"></script>
+</body>
+</html>
