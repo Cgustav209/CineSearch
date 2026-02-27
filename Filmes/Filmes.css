@@ -1,217 +1,98 @@
 /* ================= RESET ================= */
 
+/* limpando essa zona que o navegador cria sozinho */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0; /* some com as margens fantasmas */
+  padding: 0; /* tira esse padding padrão inútil */
+  box-sizing: border-box; /* largura decente, sem matemática surpresa */
+  font-family: Arial, Helvetica, sans-serif; /* fonte limpa, simples, sem firula */
 }
 
+/* preciso disso pra centralização não ficar bugada */
 html, body {
-  height: 100%;
+  height: 100%; /* ocupa a tela inteira, sem chororô */
 }
 
 /* ================= BODY ================= */
 
+/* fundo principal, clima já começa aqui */
 body {
-  background: url("../img/FundoTex.png") no-repeat center center;
-  background-size: cover;
-  background-attachment: fixed;
-  background-color: #000; /* segurança contra fundo branco */
+  background: url("../img/FundoTex.png") no-repeat center center; /* imagem centralizada bonitinha */
+  background-size: cover; /* cobre tudo, nada de buraco branco */
+  background-attachment: fixed; /* fundo fixo pra dar aquele efeito mais elegante */
+  background-color: #000; /* plano B, porque fundo branco aqui é crime */
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+  display: flex; /* flex porque eu quero controle */
+  justify-content: center; /* centraliza no eixo x */
+  align-items: center; /* centraliza no eixo y */
+  min-height: 100vh; /* garante altura mínima da viewport */
 }
 
 /* ================= GRID PRINCIPAL ================= */
 
+/* container geral da parada */
 .movie-view {
-  width: 1100px;
-  max-width: 95%;
+  width: 1100px; /* largura padrão pensada na calma */
+  max-width: 95%; /* responsivo raiz, sem complicação */
 
-  display: grid;
-  grid-template-columns: 300px 1fr 180px;
-  grid-template-rows: auto auto auto auto;
-  gap: 12px;
+  display: grid; /* grid porque flex aqui não resolve tudo */
+  grid-template-columns: 300px 1fr 180px; /* capa fixa, conteúdo flexível, infos menores */
+  grid-template-rows: auto auto auto auto; /* linhas automáticas, deixa o conteúdo mandar */
+  gap: 12px; /* respiro entre os blocos */
 }
 
 /* ================= CARDS ================= */
 
+/* todo card começa igual */
 .movie-view > div {
-  padding: 20px;
-  border-radius: 12px;
-  opacity: 0;
-  transition: all 0.6s ease;
+  padding: 20px; /* espaço interno pra não ficar apertado */
+  border-radius: 12px; /* arredondado padrão */
+  opacity: 0; /* começa invisível porque animação é estética */
+  transition: all 0.6s ease; /* suavidade, nada de coisa seca */
 }
 
 /* ================= ESTILOS ESPECÍFICOS ================= */
 
 .capa {
-  background:ur;
-    border-radius: 16px;
+  background:ur; /* aqui claramente deu uma viajada ou ficou incompleto */
+  border-radius: 16px; /* mais arredondado porque capa merece destaque */
 }
 
 .sinopse {
-   position: relative;
+  position: relative; /* necessário pro before funcionar */
   border-radius: 16px;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(15px);
-  color: white;
-  background-color: transparent;
+  backdrop-filter: blur(10px); /* efeito vidro, vibe moderna */
+  -webkit-backdrop-filter: blur(15px); /* safari não fica de fora */
+  color: white; /* texto branco porque contraste é rei */
+  background-color: transparent; /* deixa o blur aparecer */
 }
 
+/* borda estilosa sem usar border normal, porque normal é chato */
 .sinopse::before {
   content: "";
   position: absolute;
-  inset: 0;
+  inset: 0; /* ocupa tudo */
   border-radius: 16px;
   padding: 3px; /* espessura da borda */
-  background: linear-gradient(90deg, #6a00ff, #ffd000);
+  background: linear-gradient(90deg, #6a00ff, #ffd000); /* roxo + dourado, impacto visual */
   -webkit-mask: 
     linear-gradient(90deg, #ffee00 0 0) content-box, 
     linear-gradient(90deg, #ae00ff 0 0);
   mask: linear-gradient(90deg, #ffee00 0 0) content-box, linear-gradient(90deg, #ae00ff 0 0);
-  -webkit-mask-composite: xor;
+  -webkit-mask-composite: xor; /* truque ninja pra virar só borda */
   mask-composite: exclude;
-  pointer-events: none;
+  pointer-events: none; /* não atrapalha clique */
 }
+
+/* repetição do padrão vidro + branco porque consistência é tudo */
 
 .elenco {
-   position: relative;
+  position: relative; /* base pro before */
   border-radius: 16px;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px); /* vidro novamente */
   -webkit-backdrop-filter: blur(15px);
   color: white;
   background-color: transparent;
-}
-
-.genero {
-   position: relative;
-  border-radius: 16px;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(15px);
-  color: white;
-  background-color: transparent;
-}
-
-
-.duracao {
-   position: relative;
-  border-radius: 16px;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(15px);
-  color: white;
-  background-color: transparent;
-}
-
-.data {
-   position: relative;
-  border-radius: 16px;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(15px);
-  color: white;
-  background-color: transparent;
-}
-
-.nota {
-   position: relative;
-  border-radius: 16px;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(15px);
-  color: white;
-  background-color: transparent;
-}
-
-.pais {
-   position: relative;
-  border-radius: 16px;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(15px);
-  color: white;
-  background-color: transparent;
-}
-
-
-.pais::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 16px;
-  padding: 3px; /* espessura da borda */
-  background: linear-gradient(90deg, #6a00ff, #ffd000);
-  -webkit-mask: 
-    linear-gradient(90deg, #ffee00 0 0) content-box, 
-    linear-gradient(90deg, #ae00ff 0 0);
-  mask: linear-gradient(90deg, #ffee00 0 0) content-box, linear-gradient(90deg, #ae00ff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  pointer-events: none;
-}
-
-.nota::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 16px;
-  padding: 3px; /* espessura da borda */
-  background: linear-gradient(90deg, #6a00ff, #ffd000);
-  -webkit-mask: 
-    linear-gradient(90deg, #ffee00 0 0) content-box, 
-    linear-gradient(90deg, #ae00ff 0 0);
-  mask: linear-gradient(90deg, #ffee00 0 0) content-box, linear-gradient(90deg, #ae00ff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  pointer-events: none;
-}
-
-.data::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 16px;
-  padding: 3px; /* espessura da borda */
-  background: linear-gradient(90deg, #6a00ff, #ffd000);
-  -webkit-mask: 
-    linear-gradient(90deg, #ffee00 0 0) content-box, 
-    linear-gradient(90deg, #ae00ff 0 0);
-  mask: linear-gradient(90deg, #ffee00 0 0) content-box, linear-gradient(90deg, #ae00ff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  pointer-events: none;
-}
-
-.duracao::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 16px;
-  padding: 3px; /* espessura da borda */
-  background: linear-gradient(90deg, #6a00ff, #ffd000);
-  -webkit-mask: 
-    linear-gradient(90deg, #ffee00 0 0) content-box, 
-    linear-gradient(90deg, #ae00ff 0 0);
-  mask: linear-gradient(90deg, #ffee00 0 0) content-box, linear-gradient(90deg, #ae00ff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  pointer-events: none;
-}
-
-.genero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 16px;
-  padding: 3px; /* espessura da borda */
-  background: linear-gradient(90deg, #6a00ff, #ffd000);
-  -webkit-mask: 
-    linear-gradient(90deg, #ffee00 0 0) content-box, 
-    linear-gradient(90deg, #ae00ff 0 0);
-  mask: linear-gradient(90deg, #ffee00 0 0) content-box, linear-gradient(90deg, #ae00ff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  pointer-events: none;
 }
 
 .elenco::before {
@@ -219,72 +100,307 @@ body {
   position: absolute;
   inset: 0;
   border-radius: 16px;
-  padding: 3px; /* espessura da borda */
-  background: linear-gradient(90deg, #6a00ff, #ffd000);
+  padding: 3px;
+  background: linear-gradient(90deg, #6a00ff, #ffd000); /* mantém identidade visual */
   -webkit-mask: 
-    linear-gradient(90deg, #ffee00 0 0) content-box, 
-    linear-gradient(90deg, #ae00ff 0 0);
-  mask: linear-gradient(90deg, #ffee00 0 0) content-box, linear-gradient(90deg, #ae00ff 0 0);
+    linear-gradient(#000 0 0) content-box, 
+    linear-gradient(#000 0 0);
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   pointer-events: none;
 }
 
+.genero {
+  position: relative;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(15px);
+  color: white;
+  background-color: transparent;
+}
 
+.genero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  padding: 3px;
+  background: linear-gradient(90deg, #6a00ff, #ffd000); /* mantém identidade visual */
+  -webkit-mask: 
+    linear-gradient(#000 0 0) content-box, 
+    linear-gradient(#000 0 0);
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
 
+.duracao {
+  position: relative;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(15px);
+  color: white;
+  background-color: transparent;
+}
+
+.duracao::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  padding: 3px;
+  background: linear-gradient(90deg, #6a00ff, #ffd000); /* mantém identidade visual */
+  -webkit-mask: 
+    linear-gradient(#000 0 0) content-box, 
+    linear-gradient(#000 0 0);
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.data {
+  position: relative;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(15px);
+  color: white;
+  background-color: transparent;
+}
+
+.data::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  padding: 3px;
+  background: linear-gradient(90deg, #6a00ff, #ffd000); /* mantém identidade visual */
+  -webkit-mask: 
+    linear-gradient(#000 0 0) content-box, 
+    linear-gradient(#000 0 0);
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.nota {
+  position: relative;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(15px);
+  color: white;
+  background-color: transparent;
+}
+
+.nota::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  padding: 3px;
+  background: linear-gradient(90deg, #6a00ff, #ffd000); /* mantém identidade visual */
+  -webkit-mask: 
+    linear-gradient(#000 0 0) content-box, 
+    linear-gradient(#000 0 0);
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.pais {
+  position: relative;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(15px);
+  color: white;
+  background-color: transparent;
+}
+
+.pais::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  padding: 3px;
+  background: linear-gradient(90deg, #6a00ff, #ffd000); /* mantém identidade visual */
+  -webkit-mask: 
+    linear-gradient(#000 0 0) content-box, 
+    linear-gradient(#000 0 0);
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.premios {
+  position: relative;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(15px);
+  color: white;
+  background-color: transparent;
+}
+
+.premios::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  padding: 3px;
+  background: linear-gradient(90deg, #6a00ff, #ffd000); /* mantém identidade visual */
+  -webkit-mask: 
+    linear-gradient(#000 0 0) content-box, 
+    linear-gradient(#000 0 0);
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.direcao {
+  position: relative;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(15px);
+  color: white;
+  background-color: transparent;
+}
+
+/* mais uma borda estilosa porque direção também é destaque */
+.direcao::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  padding: 3px;
+  background: linear-gradient(90deg, #6a00ff, #ffd000); /* mantém identidade visual */
+  -webkit-mask: 
+    linear-gradient(#000 0 0) content-box, 
+    linear-gradient(#000 0 0);
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.avaliacoes {
+  position: relative;
+  border-radius: 16px;
+  backdrop-filter: blur(10px); /* vidro também */
+  -webkit-backdrop-filter: blur(15px);
+  color: white;
+  background-color: transparent;
+  grid-column: 1 / -1; /* ocupa tudo, porque avaliações merecem espaço */
+}
+
+.avaliacoes::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  padding: 3px;
+  background: linear-gradient(90deg, #6a00ff, #ffd000);
+  -webkit-mask: 
+    linear-gradient(#000 0 0) content-box, 
+    linear-gradient(#000 0 0);
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.avaliacoes h3 {
+  margin-bottom: 15px; /* espaço entre título e conteúdo */
+}
+
+.rating-item {
+  margin-bottom: 12px; /* separação entre cada avaliação */
+}
+
+.rating-header {
+  display: flex; /* ícone e texto lado a lado */
+  align-items: center; /* alinhado bonitinho */
+  gap: 10px; /* espaço justo */
+  margin-bottom: 5px;
+}
+
+.rating-header img {
+  width: 24px;
+  height: 24px; /* tamanho padrão, sem exagero */
+}
+
+.rating-bar {
+  width: 100%;
+  height: 8px; /* fininha, elegante */
+  background: rgba(255,255,255,0.2); /* fundo suave */
+  border-radius: 10px;
+  overflow: hidden; /* impede o fill de escapar */
+}
+
+.rating-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #ffd000, #ffae00); /* barra chamativa */
+}
+
+/* rodapé simples, direto e escuro */
 .rodape {
-  background: #111;
-  grid-column: 1 / -1;
+  background: #111; /* preto suave */
+  grid-column: 1 / -1; /* largura total */
   text-align: center;
   color: white;
 }
 
 /* ================= POSICIONAMENTO GRID ================= */
 
-.capa { grid-row: 8 / 1; }
+.capa { grid-row: 8 / 1; } /* posicionamento meio suspeito mas tá aí */
 .sinopse { grid-column: 2 / 4; }
 .genero { grid-column: 2; }
 .duracao { grid-column: 3; }
 .data { grid-column: 2; }
 .nota { grid-column: 3; }
 .pais { grid-column: 2 / 4; }
+.premios { grid-column: 2 / 4;}
 .elenco { grid-column: 1 / 3; }
 
 /* ================= IMAGEM ================= */
 
 .capa img {
-  width: 100%;
+  width: 100%; /* ocupa tudo */
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* sem distorcer, só corta */
   border-radius: 12px;
 }
 
 /* ================= ANIMAÇÕES DE ENTRADA ================= */
 
 .capa, .elenco {
-  transform: translateX(-120px);
+  transform: translateX(-120px); /* vem da esquerda dramático */
 }
 
 .sinopse {
-  transform: translateY(-120px);
+  transform: translateY(-120px); /* desce de cima estiloso */
 }
 
 .duracao, .nota {
-  transform: translateX(120px);
+  transform: translateX(120px); /* entra da direita */
 }
 
 .data, .pais, .rodape {
-  transform: translateY(120px);
+  transform: translateY(120px); /* sobe de baixo */
 }
 
 .movie-view.active > div {
-  transform: translate(0, 0);
-  opacity: 1;
+  transform: translate(0, 0); /* volta pro lugar certo */
+  opacity: 1; /* aparece suavemente */
 }
 
 /* ================= DELAYS ================= */
 
-.movie-view.active .capa { transition-delay: 0.1s; }
+.movie-view.active .capa { transition-delay: 0.1s; } /* efeito cascata começando */
 .movie-view.active .sinopse { transition-delay: 0.2s; }
 .movie-view.active .genero { transition-delay: 0.3s; }
 .movie-view.active .duracao { transition-delay: 0.35s; }
@@ -297,15 +413,15 @@ body {
 /* ================= BOTÃO ================= */
 
 button {
-  padding: 10px 20px;
-  border: none;
-  background: linear-gradient(90deg, #ffd000, #ffae00);
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 8px;
-  transition: 0.3s ease;
+  padding: 10px 20px; /* confortável */
+  border: none; /* sem borda feia padrão */
+  background: linear-gradient(90deg, #ffd000, #ffae00); /* destaque visual */
+  font-weight: bold; /* chama atenção */
+  cursor: pointer; /* óbvio que é clicável */
+  border-radius: 8px; /* leve arredondado */
+  transition: 0.3s ease; /* suavidade no hover */
 }
 
 button:hover {
-  transform: scale(1.05);
+  transform: scale(1.05); /* cresce de leve, só pra dar aquele charme */
 }
