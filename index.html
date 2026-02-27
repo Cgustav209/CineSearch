@@ -8,14 +8,20 @@
 </head>
 <body>
     <header>
-        <h1>Cine Search</h1>
       
-     <form id="search-form">
-            <input id="search-input" type="text" placeholder="Digite o nome do filme..." required>     
-    </form>
-
-     <button id="tema" type="submit">*</button>
-   
+    <div class="headerMoblie">
+        <div class="headerLogo">
+            <h1>Cine Search</h1>
+       </div>
+       <button class="btTema" id="btTema">#</button>       
+    </div>
+     <div class="search-container">
+            <form id="search-form">
+                    <input id="search-input" type="text" placeholder="Digite o nome do filme..." required>    
+                    <input type="button" value="Buscar" id="btnBuscar">
+                
+            </form>
+    </div>
      </header> 
       <hr>
     <main>
@@ -61,22 +67,27 @@
                     <p>filmes</p>
                 </div>
             </div>
-            <!-- Os filmes serão exibidos aqui -->
+           <!-- Os filmes serão exibidos aqui -->
             <div class="filmes" id="movies-list">  
-                 <a href="#" class="filme">
-                    <img src="https://i0.wp.com/audienciadatv.net/wp-content/uploads/2023/03/o-espetacular-homem-aranha-21.jpg?resize=750%2C1000&ssl=1" alt="Poster do Filme">
+             
+                
+                    <!-- <a href="#" class="filme">
+                    <img id=" posterFilme" src="" alt="Poster">
                     <h3 id="tituloFilme">Titulo</h3>
                     <div>
                         <p id="lancamento">2020</p>
-                        <p id="gênero">genero</p>
+                    
                     </div>
-                 </a>
+                 </a> -->
+               
             </div>              
          </section>
     </main>
+
+    </div>
     <footer>
         <p>&copy; 2026 Cine Search. Todos os direitos reservados.</p>
     </footer>
-    <script src="/javascript/principalscript.js"></script>
+    <script src="javascript/script.js"></script>
 </body>
 </html>
