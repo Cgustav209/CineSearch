@@ -20,6 +20,10 @@
 
 }
 /*=================================================================*/
+img{
+    width: 250px;
+}
+
 hr {
     border: none;
     border-top: 2px solid var(--terceary-color);
@@ -36,21 +40,17 @@ body {
 /*====================================================*/
 header {
     background: var(--corHeader);
-    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
 
-    .headerMoblie {
-        display: flex;
-        flex-direction: row;
-        gap: 180px;
-    }
     .search-container {
         display: flex;
         width: 100%;
         justify-content: center;
+        gap: 10px;
+        margin: 10px;
 
         form {
             display: flex;
@@ -60,11 +60,16 @@ header {
 
             input {
                 flex: 1;
-                padding: 10px;
+                padding: 15px;
                 border-radius: 5px;
                 border: none;
                 font-size: 14px;
             }
+        }
+        .botao{
+            background-color: var(--terceary-color);
+            width: 100px;
+            border-radius: 5px;
         }
     }
     .btTema {
@@ -74,6 +79,9 @@ header {
         border-radius: 5px;
         cursor: pointer;
         justify-content: flex-end;
+    }
+    .pesquisar{
+        background-color:var(--corDestaque);
     }
 }
 /*====================================================*/
@@ -153,11 +161,15 @@ main {
     .filme {
         background: var(--auxiliar-color);
         border-radius: 10px;
-        overflow: hidden;
-        width: 150px;
+        overflow: hidden; 
+        width: 250px;
         text-align: center;
         color: var(--text-color);
         text-decoration: none;
+        
+   transition: 0.2s ease; /* animação suave */
+    border: 2px solid transparent;
+
 
         img {
             width: 100%;
@@ -181,8 +193,15 @@ main {
             }
         }
     }
+    .filme:hover{
+        animation-delay: 0.1ms;
+        width: 280px;
+       
+    }
 }
-/*======================================================*/
+
+
+
 footer {
     background: var(--corNav);
     text-align: start;
@@ -190,6 +209,7 @@ footer {
     padding: 10px;
 
 }
+/*======================================================*/
 @media (min-width: 748px) {
     header {
         flex-direction: row;
@@ -210,8 +230,12 @@ footer {
         font-size: 20px;
         padding: 10px 20px;
     }
+ 
     }
-    
+    .filme{
+        width: 250px;
+    }
+
 }
 
 #modalFilme {
