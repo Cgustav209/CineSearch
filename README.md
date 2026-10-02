@@ -35,3 +35,9 @@ npm install
 
 # Execute a aplicação em modo de desenvolvimento
 npm run dev
+```
+
+## 🤝 Colaboradores
+
+| [<img loading="lazy" src="https://github.com/Cgustav209.png" width=115><br><sub>Claudio Gustavo</sub>](https://github.com/Cgustav209) | [<img loading="lazy" src="https://github.com/Heitor-Guimaraes-10.png" width=115><br><sub>Heitor Guimarães</sub>](https://github.com/Heitor-Guimaraes-10) |
+| :---: | :---: |
