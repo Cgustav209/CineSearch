@@ -1,8 +1,11 @@
+
 # 🎬 CineSearch
 
 Um projeto focado em explorar catálogos de filmes, permitindo buscas detalhadas e visualização de informações sobre as obras cinematográficas.
 
-![CineSearch Preview]([URL_DA_IMAGEM_AQUI_SE_TIVER])
+
+<img width="1257" height="635" alt="CineSearch Preview" src="https://github.com/user-attachments/assets/a56a8cb7-0ea3-41e6-bdf6-050a498512e9" />
+
 
 ## 🚀 Funcionalidades
 
