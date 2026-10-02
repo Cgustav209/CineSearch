@@ -12,7 +12,7 @@ Um projeto focado em explorar catálogos de filmes, permitindo buscas detalhadas
 - **Busca de Filmes:** Pesquisa rápida de títulos.
 - **Detalhes da Obra:** Visualização de sinopse, nota de avaliação e data de lançamento.
 - **Interface Responsiva:** Adaptação para telas de computadores e dispositivos móveis.
-- **Consumo de API:** Integração com a API do [TMDB / OMDB - Ajuste qual você usou].
+- **Consumo de API:** Integração com a API do [OMDB].
 
 ## 🛠️ Tecnologias Utilizadas
 
