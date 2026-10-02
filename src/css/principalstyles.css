@@ -1,0 +1,256 @@
+/* ==========================================================================
+   1. RESET E TIPOGRAFIA BASE
+   ========================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* ==========================================================================
+   2. VARIÁVEIS DE CORES
+   ========================================================================== */
+:root {
+  --primary-color: #0b0b17;
+  --secondary-color: rgb(140, 0, 255);
+  --terceary-color: #ffd000;
+  --background-color: linear-gradient(135deg, #07070f 0%, #1a1a2e 100%);
+  --text-color: #ffffff;
+  --auxiliar-color: #0e263e;
+
+  /* Gradientes e Destaques */
+  --gradient: linear-gradient(45deg, #ff6347, #ff4500);
+  --corDestaque: linear-gradient(90deg, #f5c518 0%, #e5a800 100%);
+
+  /* Navegação */
+  --corNav: #0a0a14;
+  --corHeader: linear-gradient(90deg, #0a0a14 0%, #0f0f1e 100%);
+}
+
+/* ==========================================================================
+   3. ELEMENTOS GERAIS
+   ========================================================================== */
+body {
+  background: var(--background-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+img {
+  width: 300px;
+}
+
+hr {
+  border: none;
+  border-top: 2px solid var(--terceary-color);
+  margin: 20px 0;
+}
+
+/* ==========================================================================
+   4. LAYOUT PRINCIPAL (Header, Main, Footer)
+   ========================================================================== */
+header {
+  background: var(--corHeader);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px; /* Corrigido: faltava o 'px' */
+
+  .search-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px;
+    border: none; /* Adicionado para remover a borda padrão do input */
+
+    form {
+      display: flex;
+      gap: 10px;
+      width: 100%;
+      max-width: 400px;
+
+      input {
+        flex: 1;
+        padding: 15px;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        font-size: 14px;
+
+        /* transição para o efeito ficar suave */
+        transition:
+          box-shadow 0.3s ease,
+          background-color 0.3s ease;
+
+        /*  Efeito quando passa o mouse (Hover) */
+        &:hover {
+          box-shadow: 0 0 8px var(--secondary-color); /* Brilho roxo */
+        }
+
+        /* Efeito quando clica para digitar (Focus) */
+        &:focus {
+          outline: none; /* Remove aquela borda preta/azul padrão do navegador */
+          box-shadow: 0 0 12px var(--terceary-color); /* Brilho amarelo/dourado ao digitar */
+        }
+      }
+    }
+
+    .search-container:hover {
+      box-shadow: 0 0 10px var(--secondary-color);
+    }
+
+    .botao {
+      background-color: var(--terceary-color);
+      width: 100px;
+      border-radius: 5px;
+      border: none; /* Adicionado para remover a borda padrão do input button */
+      cursor: pointer; /* Adicionado para indicar clique */
+    }
+  }
+
+  .btTema {
+    background: var(--corDestaque);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    justify-content: flex-end;
+  }
+
+  .pesquisar {
+    background-color: var(--corDestaque);
+  }
+}
+
+main {
+  flex-grow: 1; /* Corrigido: garante que o main expanda e empurre o footer para baixo */
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  background: var(--corNav);
+  color: var(--terceary-color);
+  text-align: center;
+  font-size: 12px;
+  padding: 1.5rem;
+}
+
+/* ==========================================================================
+   5. COMPONENTES (Apresentação e Filmes)
+   ========================================================================== */
+.apresentacao {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+
+  .apresentacao-texto {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    hr {
+      border: 2px solid var(--terceary-color);
+      height: 30px;
+      margin: 0; /* Adicionado para evitar espaçamento indesejado do hr global */
+    }
+
+    h2 {
+      font-size: 24px;
+      background: var(--corDestaque);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  .quantidade {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+    background: var(--auxiliar-color);
+    padding: 10px 15px;
+  }
+}
+
+.filmes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+
+  .filme {
+    background: var(--auxiliar-color);
+    border-radius: 10px;
+    overflow: hidden;
+    width: 250px;
+    text-align: center;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: width 0.2s ease; /* Melhorado para transição apenas na largura */
+    border: 2px solid transparent;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    h3 {
+      font-size: 16px;
+      margin-top: 10px;
+    }
+
+    div {
+      display: flex;
+      padding: 10px;
+      justify-content: space-between;
+
+      p {
+        font-size: 12px;
+        margin-top: 5px;
+      }
+    }
+  }
+
+  .filme:hover {
+    width: 280px; /* Aumenta levemente o card no hover */
+    transform: scale(1.05); /* Adiciona um leve zoom */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Adiciona sombra para destaque */
+    transition: width 0.3s ease; /* Mantém a transição suave */
+  }
+}
+
+/* ==========================================================================
+   6. MEDIA QUERIES (Responsividade)
+   ========================================================================== */
+@media (min-width: 748px) {
+  header {
+    flex-direction: row;
+    padding: 10px 20px;
+  }
+
+  .headerMoblie {
+    display: flex;
+    flex-direction: column;
+    gap: 180px; /* Considere revisar este valor se o layout quebrar telas grandes */
+  }
+
+  .search-container {
+    width: 300px;
+  }
+
+  .filmes {
+    .filme {
+      width: 250px;
+    }
+  }
+}

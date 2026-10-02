@@ -1,78 +1,46 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cine Search</title>
-    <link rel="stylesheet" href="/scr/principalstyles.css">
-</head>
-<body>
+    <link rel="icon" type="image/png" href="./src/img/logo.png" />
+    <link rel="stylesheet" href="./src/css/principalstyles.css" />
+  </head>
+  <body>
     <header>
-      
-    <div class="headerMoblie">
-        <div class="headerLogo">
-            <img class="logo" alt="logo" src="./scr/imgs/logo.png"/>
-          
-       </div>
-       <!-- <button class="btTema" id="btTema">#</button>        -->
-    </div>
-     <div class="search-container">
-            <form id="search-form">
-                    <input  id="search-input" type="text" placeholder="Digite o nome do filme..." required>    
-             </form> 
-              <input class="botao" type="button" value="Buscar" id="btnBuscar">
-   
-    </div>
-     </header> 
-      <hr>
+      <div class="headerLogo">
+        <img class="logo" alt="logo" src="./src/img/logo.png" />
+      </div>
+
+      <div class="search-container">
+        <form id="search-form">
+          <input
+            id="search-input"
+            type="text"
+            placeholder="Digite o nome do filme..."
+            required
+          />
+        </form>
+        <input class="botao" type="submit" value="Buscar" id="btnBuscar" />
+      </div>
+    </header>
+    <hr />
     <main>
-        <!-- <nav class="ListaCategorias" id="categorias">
-             Lista de categorias de filmes -->
-            <!-- <ul class="categorias">
-                <li>
-                    <a href="#">Todos</a>
-                </li>
-                <li>
-                    <a href="#">Acão</a>
-                </li>
-                <li>
-                    <a href="#">Ficção Científica</a>
-                </li>
-                <li>
-                    <a href="#">Terror</a>
-                </li>
-                <li>
-                    <a href="#">Drama</a>
-                </li>
-                <li>
-                    <a href="#">Aventura</a>
-                </li>
-                <li>
-                    <a href="#">Thiller</a>
-                </li>
-                <li>
-                    <a href="#">Romance</a>
-                </li>
-            </ul>
-            
-        </nav> -->
-        <!-- <hr> -->
-         <section class="sessaoFilmes" id="movies-container">
-            <div class="apresentacao">
-               <div class="apresentacao-texto">
-                    <hr>
-                    <h2 id="categoria">Todos</h2>
-                </div>
-                <!-- <div class="quantidade">
-                    <h2 id="quantidade-filmes">0</h2>
-                    <p>filmes</p>
-                </div> -->
-            </div>
-           <!-- Os filmes serão exibidos aqui -->
-            <div class="filmes" id="movies-list">  
-             
-                
-                    <!-- <a href="#" class="filme">
+      <section class="sessaoFilmes" id="movies-container">
+        <div class="apresentacao">
+          <div class="apresentacao-texto">
+            <hr />
+            <h2 id="categoria">Todos</h2>
+          </div>
+          <div class="quantidade">
+            <h2 id="quantidade-filmes"></h2>
+            <p>filmes</p>
+          </div>
+        </div>
+        <!-- Os filmes serão exibidos aqui -->
+        <div class="filmes" id="movies-list">
+          <!-- <a href="#" class="filme">
                     <img id=" posterFilme" src="" alt="Poster">
                     <h3 id="tituloFilme">Titulo</h3>
                     <div>
@@ -80,15 +48,16 @@
                     
                     </div>
                  </a> -->
-               
-            </div>              
-         </section>
+        </div>
+      </section>
     </main>
 
-    </div>
     <footer>
-        <p>&copy; 2026 Cine Search. Todos os direitos reservados.</p>
+      <p>
+        &copy; 2026 Cine Search. Todos os direitos reservados a Cgustav209 e
+        Heitor-Guimaraes-10 .
+      </p>
     </footer>
-    <script src="javascript/script.js"></script>
-</body>
+    <script src="./js/script.js"></script>
+  </body>
 </html>
